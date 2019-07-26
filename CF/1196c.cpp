@@ -11,7 +11,6 @@ int main()
 		int xr, xl, yh, yl;
 		xr = yh = 100000;
 		xl = yl = -100000;
-		bool suc = true;
 		while (N--) {
 			cin >> x >> y >> a >> b >> c >> d; //left, up, right, down
 
@@ -21,7 +20,7 @@ int main()
 			if (!d && yl <= y) yl = y;
 		}
 	lpout: {}
-		if (suc && yl <= yh && xl <= xr) cout << "1 " << xl << " " << yl << "\n";
+		if (yl <= yh && xl <= xr) cout << "1 " << xl << " " << yl << "\n";
 		else cout << "0\n";
 	}
 }
